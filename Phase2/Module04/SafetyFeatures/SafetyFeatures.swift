@@ -389,8 +389,6 @@ let apiURL = URL(string: "https://api.pnc.com/v1")!
 // ============================================================
 //
 // YOU HAVE NOW COVERED ALL FIVE CONTENT BLOCKS OF MODULE 4.
-// The capstone exercise ties everything together.
-// Open Capstone/Capstone_Starter.swift to begin.
 //
 // FINAL REFLECTION:
 // 1. What is a retain cycle? Draw it. How do you break one?
