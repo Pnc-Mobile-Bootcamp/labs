@@ -23,7 +23,7 @@ don't have to hand-transcribe code from a slide.
 ## Step 2: Set the deployment target
 
 1. Select the project → the `PNCMobileApp` target → **General** tab.
-2. Under **Minimum Deployments**, set **iOS 16.0**.
+2. Under **Minimum Deployments**, set **iOS 26.0**.
 
 ## Step 3: Create three schemes for three environments
 
@@ -39,8 +39,18 @@ Add `AppEnvironment.swift` (provided in this folder) to your project.
 
 ## Step 5: Configure Info.plist
 
+Modern Xcode applications do not use an Info.plist file by default.
+Force the generation of this file using the following steps:
+1. Select your project root from the top of the Project Navigator
+2. Select your app under the Targets list
+3. Select the Info tab at the top of the content area
+4. Under Custom iOS Target Properties, hover any existing row and select the plus (+) sign
+5. Type in a custom property name (anything will do, just do not select an existing value from the list)
+6. Enter a value for the custom property. This will force Xcode to create the Info.plist file.
+
 Add the keys from `PNCMobileApp_Info_Additions.plist.xml` (provided in this folder)
-to your project's Info.plist.
+to the new Info.plist file, replacing the custom one you just created.
+Xcode no longer edits the plist file as text, so use VS Code to do the edits
 
 ## Step 6: Add a Swift Package dependency
 
@@ -48,8 +58,15 @@ to your project's Info.plist.
 2. URL: `https://github.com/Alamofire/Alamofire.git`
 3. Rule: **Up to Next Major Version**, starting at `5.8.0`.
 4. Add the `Alamofire` product to the `PNCMobileApp` target.
+5. Select your project root in the left sidebar, then choose your app Target.
+6. Go to the General tab.
+7. Scroll down to the Frameworks, Libraries, and Embedded Content section.
+8. Look for AlamoFireDynamic. If present, select it and click the minus (-) button to remove it.
 
 ## Step 7: Implement lifecycle-aware behavior
+
+Add the SessionManager.swift file provided in this folder to your project.
+This adds a stub version of the class you will create in this module's lab.
 
 Replace your generated `PNCMobileAppApp.swift` with the version provided in this
 folder (it references `SessionManager`, built in the lab exercise — add a stub or
@@ -58,7 +75,7 @@ complete the lab first).
 ## Step 8: Verify across simulators
 
 1. **Window > Devices and Simulators** (`Cmd+Shift+2`). Confirm you have an
-   iPhone SE, an iPhone 15 Pro, and an iPad simulator available.
+   iPhone Air, an iPhone 16 Pro, and an iPad simulator available.
 2. Build and run (`Cmd+R`) against each, switching device in the toolbar.
 3. Confirm no crash on any of the three, and that the correct `API_ENVIRONMENT`
    value prints for each active scheme.
