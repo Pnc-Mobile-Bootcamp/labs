@@ -1,0 +1,33 @@
+<!--
+  PNCMobileApp_Info_Additions.plist.xml
+  Module 5 — The iOS Development Environment
+  Section 5.3, Step 5: Configure Info.plist for a banking application's
+  required capabilities.
+
+  These keys are not optional boilerplate. Omitting NSCameraUsageDescription
+  or NSFaceIDUsageDescription causes an immediate crash the first time the
+  corresponding API (AVCaptureDevice / LocalAuthentication) is invoked on a
+  physical device — a runtime failure, not a compile-time error.
+
+  Add these entries to the project's Info tab, or paste directly into the
+  raw Info.plist source (Right-click Info.plist > Open As > Source Code).
+-->
+<key>NSFaceIDUsageDescription</key>
+<string>PNC Mobile uses Face ID to securely authenticate your identity.</string>
+
+<key>NSCameraUsageDescription</key>
+<string>PNC Mobile uses your camera to deposit checks and scan QR codes.</string>
+
+<!--
+  Deep link URL scheme so an external process (e.g. an OAuth identity
+  provider) can redirect back into the app after login.
+-->
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>pncmobile</string>
+        </array>
+    </dict>
+</array>
