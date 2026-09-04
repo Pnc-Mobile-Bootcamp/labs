@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSFaceIDUsageDescription</key>
+	<string>PNC Mobile uses Face ID to securely authenticate your identity.</string>
+
+
+	<key>NSCameraUsageDescription</key>
+	<string>PNC Mobile uses your camera to deposit checks and scan QR codes.</string>
+
+
+	<!--
+	Deep link URL scheme so an external process (e.g. an OAuth identity
+	provider) can redirect back into the app after login.
+	-->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>pncmobile</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
