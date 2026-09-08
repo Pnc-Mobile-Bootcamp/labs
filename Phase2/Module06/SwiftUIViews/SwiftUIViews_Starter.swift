@@ -9,6 +9,10 @@
 //  our products. Your task is to create two views using SwiftUI. 
 //  The first will display a list of products and the second will
 //  display details for one product.
+//
+//  You can add these two views to an existing SwiftUI app or
+//  start a new SwiftUI app to contain them.
+//  
 //  
 //  REQUIREMENTS
 //  1.  The Product class must contain the following properties:
@@ -28,6 +32,11 @@
 //  6.  Tapping on one of the Products in the list should navigate
 //      to the details screen and also pass the selected Product
 //      to be displayed.
-//  7.  The Product class and both views should be committed to your
-//      homework repo and pushed.
 //  
+//
+//  DELIVERABLES
+//
+//  The Product class and both views should be committed to your
+//  homework repo and pushed. You can define them all in one file
+//  or define each in their own file, as you see fit.
+//
