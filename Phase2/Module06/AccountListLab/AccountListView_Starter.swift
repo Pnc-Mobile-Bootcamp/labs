@@ -6,7 +6,7 @@
 //  Lab Exercise: PNC Mobile — Accounts List Screen
 //
 //  SCENARIO
-//  Build the accounts list screen for PNC Mobile — the capstone screen for
+//  Build the accounts list screen for PNC Mobile — the lab exercise screen for
 //  Module 6. This exercise pulls together state management (Block 2),
 //  navigation (Block 3), List (Block 4), and accessibility (Block 6).
 //
