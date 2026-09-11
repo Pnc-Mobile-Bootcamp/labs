@@ -36,9 +36,9 @@ struct Account: Identifiable, Hashable {
 }
 
 let sampleAccounts: [Account] = [
-    Account(name: "Everyday Checking", maskedNumber: "\u2022\u2022\u2022\u2022 4471", balance: 4281.16),
-    Account(name: "High Yield Savings", maskedNumber: "\u2022\u2022\u2022\u2022 9902", balance: 18_340.50),
-    Account(name: "Rewards Credit Card", maskedNumber: "\u2022\u2022\u2022\u2022 2216", balance: -612.44),
+    Account(name: "Everyday Checking", maskedNumber: "\u{2022}\u{2022}\u{2022}\u{2022} 4471", balance: 4281.16),
+    Account(name: "High Yield Savings", maskedNumber: "\u{2022}\u{2022}\u{2022}\u{2022} 9902", balance: 18_340.50),
+    Account(name: "Rewards Credit Card", maskedNumber: "\u{2022}\u{2022}\u{2022}\u{2022} 2216", balance: -612.44),
 ]
 
 // MARK: - TODO 1: AccountListView
