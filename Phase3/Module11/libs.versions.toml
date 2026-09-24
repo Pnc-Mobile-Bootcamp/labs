@@ -1,0 +1,22 @@
+# libs.versions.toml
+# Module 11 — Android Development Environment
+# Version catalog entries backing Step 5 of the lab exercise.
+#
+# Add the [versions] and [libraries] entries below into your project's
+# existing gradle/libs.versions.toml file, under their respective sections.
+
+[versions]
+retrofit = "2.11.0"
+
+[libraries]
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+
+# Usage in app/build.gradle.kts:
+#
+#   dependencies {
+#       implementation(libs.retrofit)
+#   }
+#
+# Note: Retrofit itself is previewed here only as a real dependency to
+# practice adding via the version catalog — full networking integration
+# with Retrofit is covered in Module 14.
